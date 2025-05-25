@@ -63,21 +63,21 @@ Zarların toplanmasıyla birlikte oyun temposu hızlanırken, oyuncunun refleksl
 
 ## 📦 Varlıklar (Assets)
 
-Oyun içinde kullanılan ses ve görseller:
+### 🖼️ Görseller (`assets/img/`)
+- `assets/img/zar1.png` – Zar 1 görseli  
+- `assets/img/zar2.png` – Zar 2 görseli  
+- `assets/img/zar3.png` – Zar 3 görseli  
+- `assets/img/cosmo.png` – Arka plan görseli  
+- `assets/img/player.png` – Uzay gemisi görseli  
 
-- `assets/background.mp3` – Arka plan müziği  
-- `assets/zar.mp3` – Zar alma sesi  
-- `assets/engel.mp3` – Engel çarpma sesi  
-- `assets/ates.mp3` – Mermi sesi  
-- `assets/zar1.png`, `zar2.png`, `zar3.png` – Zar görselleri  
-- `assets/player.png` – Gemi sprite’ı  
-- `assets/obstacle.png` – Engel sprite’ı  
-- `assets/foto1.png` → Başlangıç  
-- `assets/foto2.png` → Oyun hareket  
-- `assets/foto3.png` → Zar alma  
-- `assets/foto4.png` → Nasıl oynanır  
-- `assets/foto5.png` → Kazanma  
-- `assets/foto6.png` → Kaybetme
+#### 📸 Oyun içi sahne görselleri
+- `assets/img/foto1.png` – Başlangıç  
+- `assets/img/foto2.png` – Oyun hareket  
+- `assets/img/foto3.png` – Zar alma  
+- `assets/img/foto4.png` – Nasıl oynanır  
+- `assets/img/foto5.png` – Kazanma  
+- `assets/img/foto6.png` – Kaybetme  
+
 
 ---
 
