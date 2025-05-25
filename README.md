@@ -106,7 +106,7 @@ Zarların toplanmasıyla birlikte oyun temposu hızlanırken, oyuncunun refleksl
 
 ## 🎥 Oynanış Videosu
 
-[📺 Youtube’da İzle](https://www.youtube.com/watch?v=ORNEK-LINK)
+[📺 Youtube’da İzle](https://www.youtube.com/watch?v=x9k5CtC12d8)
 
 ---
 
