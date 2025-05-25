@@ -1,0 +1,4 @@
+- Sohbet 1: https://chatgpt.com/c/68333947-b78c-800b-b023-0c6c0a1e2cce  
+- Sohbet 2: https://chatgpt.com/c/6833378e-93fc-800b-a53c-5f3042e245da  
+- Sohbet 3: https://chatgpt.com/c/683335c5-8854-800b-83d1-b161535278ba  
+- Sohbet 4: https://chatgpt.com/c/683334ef-7b08-800b-866f-d8e9db0714d9
