@@ -21,7 +21,7 @@ Zarların toplanmasıyla birlikte oyun temposu hızlanırken, oyuncunun refleksl
 ---
 
 ### 📸 1. Başlangıç Ekranı
-![Foto 1](assets/foto1.png)
+![Foto 1](assets/img/foto1.png)
 
 ---
 
@@ -37,27 +37,28 @@ Zarların toplanmasıyla birlikte oyun temposu hızlanırken, oyuncunun refleksl
 ---
 
 ### 📸 2. Oyun Sırasında Hareket
-![Foto 2](assets/foto2.png)
+![Foto 2](assets/img/foto2.png)
+
 
 ---
 
 ### 📸 3. Zar Toplama Anı
-![Foto 3](assets/foto3.png)
+![Foto 3](assets/img/foto3.png)
 
 ---
 
 ### 📸 4. “Nasıl Oynanır” Paneli Açıkken
-![Foto 4](assets/foto4.png)
+![Foto 4](assets/img/foto4.png)
 
 ---
 
 ### 📸 5. Oyun Kazanma Ekranı
-![Foto 5](assets/foto5.png)
+![Foto 5](assets/img/foto5.png)
 
 ---
 
 ### 📸 6. Oyun Kaybetme Ekranı
-![Foto 6](assets/foto6.png)
+![Foto 6](assets/img/foto6.png)
 
 ---
 
