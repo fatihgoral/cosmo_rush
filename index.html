@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmo Rush</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ilk ekran oyun basi kismi -->
+  <div id="startScreen" class="start-screen">
+    <h2>🚀 Cosmo Rush</h2>
+    <button id="startBtn">🎮 Oyuna Başla</button>
+  </div>
+  <!-- oyun alanı -->
+
+  <div class="container">
+    <h1 class="title">🚀 Cosmo Rush</h1>
+
+    <div class="stats">
+      <span>Skor: <span id="score">0</span></span>
+      <span>Çarpma: <span id="hits">0</span></span>
+      <span>Mermi: <span id="ammo">5</span></span>
+    </div>
+<!-- kanvas kismi-->
+    <canvas id="gameCanvas" width="800" height="600" tabindex="0"></canvas>
+
+    <!-- oyun bitince cikan ekrsnimiz -->
+    <div id="bitisEkrani" class="bitis-katmani">
+      <div class="bitis-ikon">🚀</div>
+      <h2 id="bitisBaslik">💥 OYUN BİTTİ</h2>
+      <p id="bitisAlt">Tekrar oynamak için aşağıdaki butona bas</p>
+    </div>
+<!-- yeniden baslamak icin tıklanan buton-->
+    <button id="restartBtn" onclick="restartGame()">🔄 Tekrar Oyna</button>
+  </div>
+
+  <!-- Bilgi icin tıkladıgımız kisim -->
+  <div id="infoToggle" onclick="toggleInfoPanel()">
+    ℹ️ <span class="info-text">Nasıl Oynanır?</span>
+  </div>
+<!-- nasıl oynanır ic kismi ve oyun hiakyesi anlatıgm kisim-->
+<div id="infoPanel">
+  <h3>🌀 Kara Delikten Kaçış</h3>
+  <p>
+    Kara delik her şeyi yutuyor. Uzay gemini kaçırmalısın!<br>
+    Uzayda bilinmezlik içinde güvenli şeritleri takip et.<br>
+    Zarları topla, hızlan, engellerden kaç ve 100 puana ulaş.
+  </p>
+  <hr>
+  <h4>🎮 Kontroller</h4>
+  <ul>
+    <li><b>A / ←</b> ve <b>D / →</b>: Sola/sağa hareket</li>
+    <li><b>F</b> veya <b>Mouse</b>: Ateş et, engel yok edince +3 puan</li>
+    <li><b>Zarlar</b>: Numara kadar hız ve skor artar</li>
+    <li><b>Hız</b>: Zar değeri arttıkça daha hızlı ilerlersin</li>
+        <li><b>Y ol</b>: Yolda ilerledigin sürece puanın artar</li>
+    <li><b>Engeller</b>: 3 çarpışma → oyun biter, her çarpışmada skor sıfırlanır</li>
+    <li><b>Skor</b>: 100 puana ulaşırsan kazanırsın</li>
+  </ul>
+</div>
+
+
+  <!-- baslamak icin yapilmasi gerekeiyor oyunu baslat ve basladiktan sonra o ekrani gizlemek icin kullandim -->
+  <script> 
+    document.getElementById("startBtn").addEventListener("click", () => {
+      document.getElementById("startScreen").style.display = "none";
+      document.getElementById("gameCanvas").style.display = "block";
+      document.getElementById("restartBtn").style.display = "none";
+      document.getElementById("bitisEkrani").style.display = "none";
+      window.requestAnimationFrame(oyunuCiz); 
+      muzikCal();
+      document.getElementById("gameCanvas").focus();
+    });
+
+    function toggleInfoPanel() {
+      const panel = document.getElementById("infoPanel");
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+  <!-- Cosmo js baglanti yaptim -->
+  <script src="cosmo.js"></script>
+</body>
+</html>

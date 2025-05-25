@@ -1,0 +1,278 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+/*  Ana sayfa kismi icin yazildi */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: url("assets/img/cosmo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*  Ana içerik icin yapildi */
+.container {
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*   başlık kısmına goruntu verildi */
+.title {
+  margin-top: 20px;
+  font-size: 36px;
+  color: #00e6d6;
+}
+
+/*  istatistik */
+.stats {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000000aa;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(3px);
+}
+
+/* Oyun alanı (canvas) */
+canvas {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 4 / 3;
+  border: 2px dashed #ffffff30;
+  background-color: transparent;
+  box-shadow: 0 0 14px rgba(0, 255, 204, 0.25);
+  outline: none;
+}
+
+canvas:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+}
+
+/*  Tekrar baslamak butonu */
+#restartBtn {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#restartBtn:hover {
+  background-color: #e53737;
+}
+
+/*  Oyun bittiğinde kullanicinin gordugu kiism */
+#bitisEkrani {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #00ffcc;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 999;
+  color: black;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 0 20px #00ffcc88;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+#bitisEkrani h2 {
+  font-size: 32px;
+  color: #000;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+#bitisEkrani p {
+  font-size: 18px;
+  color: #222;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.bitis-ikon {
+  font-size: 48px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/*  Bilgilendirme kutusu icin ayar */
+#infoToggle {
+  position: fixed;
+  top: 28%;
+  left: calc(50% + 420px);
+  transform: translateY(-50%);
+  background: #222;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  box-shadow: 0 0 12px #00f7ff;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+#infoToggle:hover {
+  background: #333;
+}
+
+#infoPanel {
+  position: fixed;
+  top: calc(28% + 60px);
+  left: calc(50% + 420px);
+  width: 270px;
+  background: rgba(0, 0, 0, 0.92);
+  color: white;
+  font-size: 14px;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00f7ff66;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+}
+
+#infoPanel h3 {
+  margin-top: 0;
+  color: #00f7ff;
+}
+
+#infoPanel ul {
+  padding-left: 20px;
+}
+
+/* Oyunun başlangıç kismi */
+#startScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  text-align: center;
+  padding: 20px;
+}
+
+#startScreen h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #00e6d6;
+}
+
+#startBtn {
+  padding: 14px 32px;
+  font-size: 20px;
+  background-color: #00ffcc;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#startBtn:hover {
+  background-color: #00e6b8;
+}
+
+/* Mobil  uyum icin */
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+
+  #infoToggle {
+    top: 12px;
+    left: 12px;
+    transform: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+
+  #infoPanel {
+    top: 60px;
+    left: 12px;
+    width: 90%;
+    font-size: 13px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #bitisEkrani {
+    width: 90%;
+    padding: 20px 16px;
+  }
+
+  #bitisEkrani h2 {
+    font-size: 24px;
+  }
+
+  #bitisEkrani p {
+    font-size: 16px;
+  }
+
+  .bitis-ikon {
+    font-size: 36px;
+  }
+}
+
+/* Ekran daraldığında sağdan taşmayı önler */
+@media (max-width: 1200px) {
+  #infoToggle,
+  #infoPanel {
+    left: auto !important;
+    right: 16px;
+  }
+}
